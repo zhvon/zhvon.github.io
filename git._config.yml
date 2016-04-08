@@ -34,7 +34,7 @@ titlecase: false # Transform title into titlecase
 external_link: true # Open external links in new tab
 filename_case: 0
 render_drafts: false
-post_asset_folder: false
+post_asset_folder: true
 relative_link: false
 future: true
 highlight:
@@ -63,11 +63,14 @@ pagination_dir: page
 # Extensions
 ## Plugins: https://hexo.io/plugins/
 ## Themes: https://hexo.io/themes/
-theme: landscape
+theme: yelee
 
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://git.coding.net/zhvon/zhvon.git
-  branch: coding-pages
+  repo: https://github.com/zhvon/zhvon.github.io.git
+  branch: master
+  #deploy to the coding.net
+  #repo: https://git.coding.net/zhvon/zhvon.git
+  #branch: coding-pages
