@@ -69,5 +69,7 @@ theme: yelee
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
   type: git
-  repo: https://github.com/zhvon/zhvon.github.io.git
-  branch: master
+  #repo: https://github.com/zhvon/zhvon.github.io.git
+  #branch: master
+  repo: https://git.coding.net/zhvon/zhvon.git
+  branch: coding-pages
