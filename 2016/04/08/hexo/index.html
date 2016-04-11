@@ -68,7 +68,7 @@ node.js通过nvm管理
 <meta property="og:image" content="http://7xsuc5.com2.z0.glb.clouddn.com/image/hexo/p13.png">
 <meta property="og:image" content="http://7xsuc5.com2.z0.glb.clouddn.com/image/hexo/p14.png">
 <meta property="og:image" content="http://7xsuc5.com2.z0.glb.clouddn.com/image/hexo/p15.jpg">
-<meta property="og:updated_time" content="2016-04-11T08:39:09.770Z">
+<meta property="og:updated_time" content="2016-04-11T08:47:56.038Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="hexo">
 <meta name="twitter:description" content="折腾了下hexo，基本环境和部署好了，特意地马一下。
@@ -404,34 +404,18 @@ node.js通过nvm管理
 </blockquote>
 <p><strong>注意：</strong>克隆已有核心代码后，执行npm install hexo、npm install、npm install hexo-deployer-git，不需要hexo init。</p>
 <hr>
-<h2 id="拥有自己的github"><a href="#拥有自己的github" class="headerlink" title="- 拥有自己的github"></a>- <strong>拥有自己的github</strong></h2><p>如果还没有github的账号就注册一个吧，<a href="http://www.github.com" target="_blank" rel="external">GitHub官网</a><br>创建一个创库，creat new repository，<br>Repository name和自己的用户名相同。就填you_user_name.github.io。（you_user_name自行替换）<br><img src="http://7xsuc5.com2.z0.glb.clouddn.com/image/hexo/p10.png" alt=""></p>
-<h2 id="设置sshkey"><a href="#设置sshkey" class="headerlink" title="- 设置sshkey"></a>- <strong>设置sshkey</strong></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">"your_email@example.com"</span></span><br><span class="line"><span class="comment">#这将按照你提供的邮箱地址，创建一对密钥</span></span><br></pre></td></tr></table></figure>
+<h2 id="拥有自己的github"><a href="#拥有自己的github" class="headerlink" title="拥有自己的github"></a><strong>拥有自己的github</strong></h2><p>如果还没有github的账号就注册一个吧，<a href="http://www.github.com" target="_blank" rel="external">GitHub官网</a><br>创建一个创库，creat new repository，<br>Repository name和自己的用户名相同。就填you_user_name.github.io。（you_user_name自行替换）<br><img src="http://7xsuc5.com2.z0.glb.clouddn.com/image/hexo/p10.png" alt=""></p>
+<h2 id="设置sshkey"><a href="#设置sshkey" class="headerlink" title="设置sshkey"></a><strong>设置sshkey</strong></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">"your_email@example.com"</span></span><br><span class="line"><span class="comment">#这将按照你提供的邮箱地址，创建一对密钥</span></span><br></pre></td></tr></table></figure>
 <p>按3个回车，密码为空<br>生成的时候会有一段这样的英文：<br>Enter file in which to save the key (/root/.ssh/id_rsa)：<br>我这里是默认路径，在/root/.ssh/ 文件夹里，当然你可以自己定义路径，回车就可以了</p>
 <p>查看公钥，复制到你的github里。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat id_rsa.pub</span><br></pre></td></tr></table></figure></p>
-<blockquote>
-<p> <strong>1. 登录github，进入你的 Account-&gt;Settings</strong></p>
-</blockquote>
-<p> <img src="http://7xsuc5.com2.z0.glb.clouddn.com/image/hexo/p7.jpg" alt=""></p>
-<blockquote>
-<p> <strong>2. 左侧栏选择SSH Keys</strong></p>
-<p> <strong>3. 复制粘贴</strong></p>
-</blockquote>
-<p> <img src="http://7xsuc5.com2.z0.glb.clouddn.com/image/hexo/p8.jpg" alt=""></p>
-<blockquote>
-<p> <strong>4. 测试下是否成功：</strong></p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
+<h3 id="1-登录github，进入你的-Account-gt-Settings"><a href="#1-登录github，进入你的-Account-gt-Settings" class="headerlink" title="1. 登录github，进入你的 Account-&gt;Settings"></a><strong>1. 登录github，进入你的 Account-&gt;Settings</strong></h3><p> <img src="http://7xsuc5.com2.z0.glb.clouddn.com/image/hexo/p7.jpg" alt=""></p>
+<h3 id="2-左侧栏选择SSH-Keys"><a href="#2-左侧栏选择SSH-Keys" class="headerlink" title="2. 左侧栏选择SSH Keys"></a><strong>2. 左侧栏选择SSH Keys</strong></h3><h3 id="3-复制粘贴"><a href="#3-复制粘贴" class="headerlink" title="3. 复制粘贴"></a><strong>3. 复制粘贴</strong></h3><p> <img src="http://7xsuc5.com2.z0.glb.clouddn.com/image/hexo/p8.jpg" alt=""></p>
+<h3 id="4-测试下是否成功："><a href="#4-测试下是否成功：" class="headerlink" title="4. 测试下是否成功："></a><strong>4. 测试下是否成功：</strong></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
 <p>一般都会成功，出现以下提示<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Hi XXXX! You<span class="string">'ve successfully authenticated, but GitHub does not provide shell access.</span></span><br></pre></td></tr></table></figure></p>
 <p>现在你已经可以通过SSH链接到GitHub了，还有一些个人信息需要完善的。<br>Git会根据用户的名字和邮箱来记录提交。GitHub也是用这些信息来做权限的处理，输入下面的代码进行个人信息的设置，把名称和邮箱替换成你自己的，名字必须是你的真名，而不是GitHub的昵称。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name <span class="string">"you_name"</span>//用户名</span><br><span class="line">git config --global user.email  <span class="string">"you@exmaple.com"</span>//填写自己的邮箱</span><br></pre></td></tr></table></figure></p>
 <p>至此，ssh就设置完毕，如有问题，请参考<a href="http://blog.csdn.net/hustpzb/article/details/8230454/" target="_blank" rel="external">Git SSH Key 生成步骤</a></p>
-<h2 id="部署到github-1"><a href="#部署到github-1" class="headerlink" title="- 部署到github"></a>- <strong>部署到github</strong></h2><blockquote>
-<p><strong>1. 选择自己的仓库目录，即 you_user_name.github.io</strong></p>
-</blockquote>
-<p><img src="http://7xsuc5.com2.z0.glb.clouddn.com/image/hexo/p9.png" alt=""><br><img src="http://7xsuc5.com2.z0.glb.clouddn.com/image/hexo/p11.png" alt=""><br><img src="http://7xsuc5.com2.z0.glb.clouddn.com/image/hexo/p12.png" alt=""><br><img src="http://7xsuc5.com2.z0.glb.clouddn.com/image/hexo/p13.png" alt=""><br><img src="http://7xsuc5.com2.z0.glb.clouddn.com/image/hexo/p14.png" alt=""></p>
-<blockquote>
-<p> <strong>2. hexo的生成和部署</strong></p>
-</blockquote>
- <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cnpm install hero-deployer-git --save</span><br><span class="line">hexo generate</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+<h2 id="部署到github-1"><a href="#部署到github-1" class="headerlink" title="部署到github"></a><strong>部署到github</strong></h2><h3 id="1-选择自己的仓库目录，即-you-user-name-github-io"><a href="#1-选择自己的仓库目录，即-you-user-name-github-io" class="headerlink" title="1. 选择自己的仓库目录，即 you_user_name.github.io"></a><strong>1. 选择自己的仓库目录，即 you_user_name.github.io</strong></h3><p><img src="http://7xsuc5.com2.z0.glb.clouddn.com/image/hexo/p9.png" alt=""><br><img src="http://7xsuc5.com2.z0.glb.clouddn.com/image/hexo/p11.png" alt=""><br><img src="http://7xsuc5.com2.z0.glb.clouddn.com/image/hexo/p12.png" alt=""><br><img src="http://7xsuc5.com2.z0.glb.clouddn.com/image/hexo/p13.png" alt=""><br><img src="http://7xsuc5.com2.z0.glb.clouddn.com/image/hexo/p14.png" alt=""></p>
+<h3 id="2-hexo的生成和部署"><a href="#2-hexo的生成和部署" class="headerlink" title="2. hexo的生成和部署"></a><strong>2. hexo的生成和部署</strong></h3> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cnpm install hero-deployer-git --save</span><br><span class="line">hexo generate</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
 <p>提示输入github的账号密码，输入密码即可。<br>注意，you_user_name.github.io 生效大约十分钟，请耐心等待。<br>hexo server 启动下，默认是4000端口<br>在浏览器中输入 you_host_name:4000（自行替换hostname）<br><img src="http://7xsuc5.com2.z0.glb.clouddn.com/image/hexo/p15.jpg" alt=""></p>
 <hr>
 <p><strong>至此，hexo+github部署完毕，enjoy it！</strong></p>
@@ -446,7 +430,7 @@ node.js通过nvm管理
         <p><span>本文标题:</span><a href="/2016/04/08/hexo/">hexo</a></p>
         <p><span>文章作者:</span><a href="/" title="回到主页">zhvon</a></p>
         <p><span>发布时间:</span>2016-04-08, 17:03:26</p>
-        <p><span>最后更新:</span>2016-04-11, 16:39:09</p>
+        <p><span>最后更新:</span>2016-04-11, 16:47:56</p>
         <p>
             <span>原始链接:</span><a class="post-url" href="/2016/04/08/hexo/" title="hexo">http://zhvon.github.io/2016/04/08/hexo/</a>
             <span class="copy-path" data-clipboard-text="原文: http://zhvon.github.io/2016/04/08/hexo/　　作者: zhvon" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
@@ -465,7 +449,7 @@ node.js通过nvm管理
 
     <div id="toc" class="toc-article">
     <strong class="toc-title">文章目录</strong>
-    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#环境的搭建"><span class="toc-number">1.</span> <span class="toc-text">环境的搭建</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#部署到github"><span class="toc-number">2.</span> <span class="toc-text">部署到github</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#拥有自己的github"><span class="toc-number">2.1.</span> <span class="toc-text">- 拥有自己的github</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#设置sshkey"><span class="toc-number">2.2.</span> <span class="toc-text">- 设置sshkey</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#部署到github-1"><span class="toc-number">2.3.</span> <span class="toc-text">- 部署到github</span></a></li></ol></li></ol>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#环境的搭建"><span class="toc-number">1.</span> <span class="toc-text">环境的搭建</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#部署到github"><span class="toc-number">2.</span> <span class="toc-text">部署到github</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#拥有自己的github"><span class="toc-number">2.1.</span> <span class="toc-text">拥有自己的github</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#设置sshkey"><span class="toc-number">2.2.</span> <span class="toc-text">设置sshkey</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-登录github，进入你的-Account-gt-Settings"><span class="toc-number">2.2.1.</span> <span class="toc-text">1. 登录github，进入你的 Account->Settings</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-左侧栏选择SSH-Keys"><span class="toc-number">2.2.2.</span> <span class="toc-text">2. 左侧栏选择SSH Keys</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-复制粘贴"><span class="toc-number">2.2.3.</span> <span class="toc-text">3. 复制粘贴</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-测试下是否成功："><span class="toc-number">2.2.4.</span> <span class="toc-text">4. 测试下是否成功：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#部署到github-1"><span class="toc-number">2.3.</span> <span class="toc-text">部署到github</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-选择自己的仓库目录，即-you-user-name-github-io"><span class="toc-number">2.3.1.</span> <span class="toc-text">1. 选择自己的仓库目录，即 you_user_name.github.io</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-hexo的生成和部署"><span class="toc-number">2.3.2.</span> <span class="toc-text">2. hexo的生成和部署</span></a></li></ol></li></ol></li></ol>
 </div>
 <style>
     .left-col .switch-btn {
