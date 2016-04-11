@@ -105,14 +105,14 @@ hexo server 启动下，默认是4000端口
 ----------
 
 
-## - **拥有自己的github** ##
+## **拥有自己的github** ##
 
 如果还没有github的账号就注册一个吧，[GitHub官网](http://www.github.com)
 创建一个创库，creat new repository，
 Repository name和自己的用户名相同。就填you_user_name.github.io。（you_user_name自行替换）
 ![](http://7xsuc5.com2.z0.glb.clouddn.com/image/hexo/p10.png)
 
-## - **设置sshkey** ##
+## **设置sshkey** ##
 ```bash
 ssh-keygen -t rsa -C "your_email@example.com"
 #这将按照你提供的邮箱地址，创建一对密钥
@@ -127,17 +127,17 @@ Enter file in which to save the key (/root/.ssh/id_rsa)：
 cat id_rsa.pub
 ```
 
->  **1. 登录github，进入你的 Account->Settings**
+### **1. 登录github，进入你的 Account->Settings** ###
 
  ![](http://7xsuc5.com2.z0.glb.clouddn.com/image/hexo/p7.jpg)
 
->  **2. 左侧栏选择SSH Keys**
+###  **2. 左侧栏选择SSH Keys** ###
 
->  **3. 复制粘贴**
+###  **3. 复制粘贴** ###
 
  ![](http://7xsuc5.com2.z0.glb.clouddn.com/image/hexo/p8.jpg)
 
->  **4. 测试下是否成功：**
+###  **4. 测试下是否成功：** ###
 
 ```bash
 ssh -T git@github.com
@@ -155,11 +155,9 @@ git config --global user.email  "you@exmaple.com"//填写自己的邮箱
 ```
 至此，ssh就设置完毕，如有问题，请参考[Git SSH Key 生成步骤](http://blog.csdn.net/hustpzb/article/details/8230454/)
 
-## - **部署到github** ##
+## **部署到github** ##
 
- 
-
-> **1. 选择自己的仓库目录，即 you_user_name.github.io**
+### **1. 选择自己的仓库目录，即 you_user_name.github.io** ###
 
 ![](http://7xsuc5.com2.z0.glb.clouddn.com/image/hexo/p9.png)
 ![](http://7xsuc5.com2.z0.glb.clouddn.com/image/hexo/p11.png)
@@ -167,7 +165,7 @@ git config --global user.email  "you@exmaple.com"//填写自己的邮箱
 ![](http://7xsuc5.com2.z0.glb.clouddn.com/image/hexo/p13.png)
 ![](http://7xsuc5.com2.z0.glb.clouddn.com/image/hexo/p14.png)
 
->  **2. hexo的生成和部署**
+###  **2. hexo的生成和部署** ###
 
  ```bash
 cnpm install hero-deployer-git --save
