@@ -17,7 +17,9 @@ tags: hexo，学习相关
 node.js通过nvm管理
 
 - 使用git克隆nvm包到linux下
-    git clone https://github.com/creationix/nvm.git
+『% codeblock [lang:bash] %』
+	git clone https://github.com/creationix/nvm.git
+『% endcodeblock %』
 
 - 执行以下命令即可吧nvm安装完毕。
     cd nvm
