@@ -4,10 +4,10 @@ date: 2016-04-08 17:03:26
 tags: hexo，学习相关
 ---
 
->折腾了下hexo，基本环境和部署好了，特意地马一下。
+折腾了下hexo，基本环境和部署好了，特意地马一下。
 
-1. 环境搭建（nvm，npm，git）
-2. 部署到github
+> 1. 环境搭建（nvm，npm，git）
+> 2. 部署到github
 
 ***
 
@@ -17,11 +17,14 @@ tags: hexo，学习相关
 node.js通过nvm管理
 
 - 使用git克隆nvm包到linux下
-『% codeblock [lang:bash] %』
+
+```bash
 	git clone https://github.com/creationix/nvm.git
-『% endcodeblock %』
+```
 
 - 执行以下命令即可吧nvm安装完毕。
+
+```bash
     cd nvm
-    
     bash install.sh
+```
