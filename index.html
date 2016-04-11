@@ -278,6 +278,23 @@
 <li>执行以下命令即可吧nvm安装完毕。</li>
 </ul>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> nvm</span><br><span class="line">bash install.sh</span><br></pre></td></tr></table></figure>
+<p><img src="http://7xsuc5.com2.z0.glb.clouddn.com/image/hexo/p1.png" alt=""></p>
+<ul>
+<li>根据需要，安装相应版本的node.js，这里我用最新的4.4.2<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm install 4.4.2</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>好了，现在node.js安装好了，接下来进行hexo的安装。</p>
+<p>根据官方的指引，执行 npm install -g hexo-cli</p>
+<p>但很多人都会出现错误无法安装成功。出现以下错误：<br><img src="http://7xsuc5.com2.z0.glb.clouddn.com/image/hexo/p2.png" alt=""></p>
+<p>主要问题是官方的源被墙了，这里我们替换成淘宝的源<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g cnpm --registry=https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure></p>
+<p><img src="http://7xsuc5.com2.z0.glb.clouddn.com/image/hexo/p3.png" alt=""></p>
+<p>因为换成了淘宝的源所以命令行npm改成cnpm，即：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install -g hexo-cli</span><br></pre></td></tr></table></figure></p>
+<p><img src="http://7xsuc5.com2.z0.glb.clouddn.com/image/hexo/p4.png" alt=""></p>
+<p>查看一下版本<br><img src="http://7xsuc5.com2.z0.glb.clouddn.com/image/hexo/p5.png" alt=""></p>
+<p>hexo server 启动下，默认是4000端口<br>在浏览器中输入 you_host_name:4000（自行替换hostname）<br><img src="http://7xsuc5.com2.z0.glb.clouddn.com/image/hexo/p6.jpg" alt=""></p>
+<p>至此，hexo环境搭建完毕，enjoy it！</p>
+<hr>
+
       
     </div>
     
