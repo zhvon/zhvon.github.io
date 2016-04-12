@@ -2,21 +2,17 @@
 title: hexo
 date: 2016-04-08 17:03:26
 tags: 
--hexo
--学习相关
+- hexo
+- 学习相关
 ---
 <Excerpt in index | 首页摘要> 
-
 折腾了下hexo，基本环境和部署好了，特意地马一下。
 
 > 1. 环境搭建（nvm，npm，git）
 > 2. 部署到github
+---
 
-***
-+ <!-- more -->
-<The rest of contents | 余下全文>
-
-># **环境的搭建** #
+# **环境的搭建** #
 
 node.js通过nvm管理
 
@@ -25,6 +21,8 @@ node.js通过nvm管理
 ```bash
 git clone https://github.com/creationix/nvm.git
 ```
+<!-- more -->
+<The rest of contents | 余下全文>
 
 - 执行以下命令即可吧nvm安装完毕。
 
@@ -70,7 +68,7 @@ hexo server 启动下，默认是4000端口
 ----------
 
 
-># **部署到github** #
+# **部署到github** #
 
 因为hexo生成的是静态页面，很适合托管到服务器上。
 这里选择github。
