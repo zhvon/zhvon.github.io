@@ -1,0 +1,586 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="utf-8">
+  
+  <title>hexo | Myblog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="折腾了下hexo，基本环境和部署好了，特意地马一下。
+
+
+环境搭建（nvm，npm，git）
+部署到github
+
+
+
+环境的搭建node.js通过nvm管理
+
+使用git克隆nvm包到linux下
+
+1git clone https://github.com/creationix/nvm.git">
+<meta property="og:type" content="article">
+<meta property="og:title" content="hexo">
+<meta property="og:url" content="http://zhvon.github.io/2016/04/08/hexo/index.html">
+<meta property="og:site_name" content="Myblog">
+<meta property="og:description" content="折腾了下hexo，基本环境和部署好了，特意地马一下。
+
+
+环境搭建（nvm，npm，git）
+部署到github
+
+
+
+环境的搭建node.js通过nvm管理
+
+使用git克隆nvm包到linux下
+
+1git clone https://github.com/creationix/nvm.git">
+<meta property="og:image" content="http://7xsuc5.com2.z0.glb.clouddn.com/image/hexo/p1.png">
+<meta property="og:image" content="http://7xsuc5.com2.z0.glb.clouddn.com/image/hexo/p2.png">
+<meta property="og:image" content="http://7xsuc5.com2.z0.glb.clouddn.com/image/hexo/p3.png">
+<meta property="og:image" content="http://7xsuc5.com2.z0.glb.clouddn.com/image/hexo/p4.png">
+<meta property="og:image" content="http://7xsuc5.com2.z0.glb.clouddn.com/image/hexo/p5.png">
+<meta property="og:image" content="http://7xsuc5.com2.z0.glb.clouddn.com/image/hexo/p6.jpg">
+<meta property="og:image" content="http://7xsuc5.com2.z0.glb.clouddn.com/image/hexo/p10.png">
+<meta property="og:image" content="http://7xsuc5.com2.z0.glb.clouddn.com/image/hexo/p7.jpg">
+<meta property="og:image" content="http://7xsuc5.com2.z0.glb.clouddn.com/image/hexo/p8.jpg">
+<meta property="og:image" content="http://7xsuc5.com2.z0.glb.clouddn.com/image/hexo/p9.png">
+<meta property="og:image" content="http://7xsuc5.com2.z0.glb.clouddn.com/image/hexo/p11.png">
+<meta property="og:image" content="http://7xsuc5.com2.z0.glb.clouddn.com/image/hexo/p12.png">
+<meta property="og:image" content="http://7xsuc5.com2.z0.glb.clouddn.com/image/hexo/p13.png">
+<meta property="og:image" content="http://7xsuc5.com2.z0.glb.clouddn.com/image/hexo/p14.png">
+<meta property="og:image" content="http://7xsuc5.com2.z0.glb.clouddn.com/image/hexo/p15.jpg">
+<meta property="og:updated_time" content="2016-04-12T07:41:09.709Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="hexo">
+<meta name="twitter:description" content="折腾了下hexo，基本环境和部署好了，特意地马一下。
+
+
+环境搭建（nvm，npm，git）
+部署到github
+
+
+
+环境的搭建node.js通过nvm管理
+
+使用git克隆nvm包到linux下
+
+1git clone https://github.com/creationix/nvm.git">
+<meta name="twitter:image" content="http://7xsuc5.com2.z0.glb.clouddn.com/image/hexo/p1.png">
+  
+    <link rel="alternative" href="/atom.xml" title="Myblog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+      <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  
+  
+  
+      <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+      <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  
+  
+    <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  
+  <script src="//cdn.bootcss.com/jquery/1.9.1/jquery.min.js"></script>
+  <script>
+      var yiliaConfig = {
+          fancybox: true,
+          animate: true,
+          isHome: false,
+          isPost: true,
+          isArchive: false,
+          isTag: false,
+          isCategory: false,
+          open_in_new: false,
+      }
+  </script>
+
+  
+      <script>
+          yiliaConfig.rootUrl = "/";
+      </script>
+  
+
+  
+
+  
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            <img src="/img/avatar.png" class="animated zoomIn">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">zhvon</a></h1>
+        </hgroup>
+
+        
+                
+
+
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">主页</a></li>
+                        
+                            <li><a href="/archives/">所有文章</a></li>
+                        
+                            <li><a href="/tags/">标签云</a></li>
+                        
+                            <li><a href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <li id="Email"><a class="Email" target="_blank" href="mailto:123@123.com" title="Email"></a></li>
+                            
+                                <li id="GitHub"><a class="GitHub" target="_blank" href="#" title="GitHub"></a></li>
+                            
+                                <li id="RSS"><a class="RSS" target="_blank" href="/atom.xml" title="RSS"></a></li>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/学习相关/" style="font-size: 10px;">学习相关</a>
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="https://hexo.io">Hexo</a>
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="https://pages.github.com/">GitHub</a>
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="http://moxfive.xyz/">MOxFIVE</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">专注于前端</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">zhvon</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img src="/img/avatar.png" class="animated zoomIn">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">zhvon</a></h1>
+            </hgroup>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">主页</a></li>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/tags/">标签云</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <li id="Email"><a class="Email" target="_blank" href="mailto:123@123.com" title="Email"></a></li>
+                            
+                                <li id="GitHub"><a class="GitHub" target="_blank" href="#" title="GitHub"></a></li>
+                            
+                                <li id="RSS"><a class="RSS" target="_blank" href="/atom.xml" title="RSS"></a></li>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+</nav>
+      <div class="body-wrap"><article id="post-hexo" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/04/08/hexo/" class="article-date">
+      <time datetime="2016-04-08T09:03:26.000Z" itemprop="datePublished">2016-04-08</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      hexo
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/hexo/">hexo</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/学习相关/">学习相关</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><excerpt in="" index="" |="" 首页摘要=""><br>折腾了下hexo，基本环境和部署好了，特意地马一下。</excerpt></p>
+<blockquote>
+<ol>
+<li>环境搭建（nvm，npm，git）</li>
+<li>部署到github</li>
+</ol>
+<hr>
+</blockquote>
+<h1 id="环境的搭建"><a href="#环境的搭建" class="headerlink" title="环境的搭建"></a><strong>环境的搭建</strong></h1><p>node.js通过nvm管理</p>
+<ul>
+<li>使用git克隆nvm包到linux下</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> https://github.com/creationix/nvm.git</span><br></pre></td></tr></table></figure>
+<a id="more"></a>
+<the rest="" of="" contents="" |="" 余下全文="">
+
+<ul>
+<li>执行以下命令即可吧nvm安装完毕。</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">cd</span> nvm</span><br><span class="line">bash install.sh</span><br></pre></td></tr></table></figure>
+<p><img src="http://7xsuc5.com2.z0.glb.clouddn.com/image/hexo/p1.png" alt=""></p>
+<ul>
+<li>根据需要，安装相应版本的node.js，这里我用最新的4.4.2<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">nvm install 4.4.2</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>好了，现在node.js安装好了，接下来进行hexo的安装。</p>
+<p>根据官方的指引，执行 npm install -g hexo-cli</p>
+<p>但很多人都会出现错误无法安装成功。出现以下错误：<br><img src="http://7xsuc5.com2.z0.glb.clouddn.com/image/hexo/p2.png" alt=""></p>
+<p>主要问题是官方的源被墙了，这里我们替换成淘宝的源<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install -g cnpm --registry=https://registry.npm.taobao.org</span><br></pre></td></tr></table></figure></p>
+<p><img src="http://7xsuc5.com2.z0.glb.clouddn.com/image/hexo/p3.png" alt=""></p>
+<p>因为换成了淘宝的源所以命令行npm改成cnpm，即：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cnpm install -g hexo-cli</span><br></pre></td></tr></table></figure></p>
+<p><img src="http://7xsuc5.com2.z0.glb.clouddn.com/image/hexo/p4.png" alt=""></p>
+<p>查看一下版本<br><img src="http://7xsuc5.com2.z0.glb.clouddn.com/image/hexo/p5.png" alt=""></p>
+<p>hexo server 启动下，默认是4000端口<br>在浏览器中输入 you_host_name:4000（自行替换hostname）<br><img src="http://7xsuc5.com2.z0.glb.clouddn.com/image/hexo/p6.jpg" alt=""></p>
+<p>至此，hexo环境搭建完毕，enjoy it！</p>
+<hr>
+<h1 id="部署到github"><a href="#部署到github" class="headerlink" title="部署到github"></a><strong>部署到github</strong></h1><p>因为hexo生成的是静态页面，很适合托管到服务器上。<br>这里选择github。<br>国内比较常用的应该是coding.net，简单玩了和github差不多，有兴趣的可以尝试。<br>本文以github为例。</p>
+<p>这里说个简单的思路</p>
+<blockquote>
+<p>利用github的github pages<br>创建两个分支<br>一个分支是一份完整的代码（即整个更目录）<br>一个分支是发布的代码（即生成的静态文件）<br>这样发布和修改就很好地管理起来<br>大概就是deploy的分支设置为发布的分支，根目录设置为完整代码的分支</p>
+</blockquote>
+<hr>
+<blockquote>
+<p><strong>搭建步骤</strong></p>
+<ol>
+<li>创建仓库，你的用户名.github.io（以下用 exmaple.github.io代替）</li>
+<li>创建两个分支：master(创建仓库的时候已经有了)和hexo</li>
+<li>使用git clone git@github.com:以下用exmaple/exmaple.github.io.git拷贝仓库，然后进行一系列的安装（npm<br>install hexo、hexo init、npm install 和 npm install hexo-deployer-git）</li>
+<li>git branch查看当前分支，默认为master，git checkout hexo切换分支，然后git add –all， git commit ，git push origin hexo（本例hexo为核定代码，master为发布代码，可按自己喜欢设置）</li>
+<li>修改_config.yml的deploy参数，分支为master</li>
+<li>执行hexo g -d生成网站并部署到github上</li>
+</ol>
+<p><strong>日常更新</strong></p>
+<ol>
+<li>修改博客后，git add –all， git commit ，git push origin hexo（如果在别的地方修改已提交到github上，执行git pull更新即可）</li>
+<li>执行hexo g -d发布网站到master分支上</li>
+</ol>
+</blockquote>
+<p><strong>注意：</strong>克隆已有核心代码后，执行npm install hexo、npm install、npm install hexo-deployer-git，不需要hexo init。</p>
+<hr>
+<h2 id="拥有自己的github"><a href="#拥有自己的github" class="headerlink" title="拥有自己的github"></a><strong>拥有自己的github</strong></h2><p>如果还没有github的账号就注册一个吧，<a href="http://www.github.com" target="_blank" rel="external">GitHub官网</a><br>创建一个创库，creat new repository，<br>Repository name和自己的用户名相同。就填you_user_name.github.io。（you_user_name自行替换）<br><img src="http://7xsuc5.com2.z0.glb.clouddn.com/image/hexo/p10.png" alt=""></p>
+<h2 id="设置sshkey"><a href="#设置sshkey" class="headerlink" title="设置sshkey"></a><strong>设置sshkey</strong></h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">ssh-keygen -t rsa -C <span class="string">"your_email@example.com"</span></span><br><span class="line"><span class="comment">#这将按照你提供的邮箱地址，创建一对密钥</span></span><br></pre></td></tr></table></figure>
+<p>按3个回车，密码为空<br>生成的时候会有一段这样的英文：<br>Enter file in which to save the key (/root/.ssh/id_rsa)：<br>我这里是默认路径，在/root/.ssh/ 文件夹里，当然你可以自己定义路径，回车就可以了</p>
+<p>查看公钥，复制到你的github里。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">cat id_rsa.pub</span><br></pre></td></tr></table></figure></p>
+<h3 id="登录github，进入你的-Account-gt-Settings"><a href="#登录github，进入你的-Account-gt-Settings" class="headerlink" title=" 登录github，进入你的 Account-&gt;Settings "></a><strong> 登录github，进入你的 Account-&gt;Settings </strong></h3><p> <img src="http://7xsuc5.com2.z0.glb.clouddn.com/image/hexo/p7.jpg" alt=""></p>
+<h3 id="左侧栏选择SSH-Keys"><a href="#左侧栏选择SSH-Keys" class="headerlink" title=" 左侧栏选择SSH Keys"></a><strong> 左侧栏选择SSH Keys</strong></h3><h3 id="复制粘贴"><a href="#复制粘贴" class="headerlink" title=" 复制粘贴"></a><strong> 复制粘贴</strong></h3><p> <img src="http://7xsuc5.com2.z0.glb.clouddn.com/image/hexo/p8.jpg" alt=""></p>
+<h3 id="测试下是否成功："><a href="#测试下是否成功：" class="headerlink" title=" 测试下是否成功："></a><strong> 测试下是否成功：</strong></h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ssh -T git@github.com</span><br></pre></td></tr></table></figure>
+<p>一般都会成功，出现以下提示<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Hi XXXX! You<span class="string">'ve successfully authenticated, but GitHub does not provide shell access.</span></span><br></pre></td></tr></table></figure></p>
+<p>现在你已经可以通过SSH链接到GitHub了，还有一些个人信息需要完善的。<br>Git会根据用户的名字和邮箱来记录提交。GitHub也是用这些信息来做权限的处理，输入下面的代码进行个人信息的设置，把名称和邮箱替换成你自己的，名字必须是你的真名，而不是GitHub的昵称。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git config --global user.name <span class="string">"you_name"</span>//用户名</span><br><span class="line">git config --global user.email  <span class="string">"you@exmaple.com"</span>//填写自己的邮箱</span><br></pre></td></tr></table></figure></p>
+<p>至此，ssh就设置完毕，如有问题，请参考<a href="http://blog.csdn.net/hustpzb/article/details/8230454/" target="_blank" rel="external">Git SSH Key 生成步骤</a></p>
+<h2 id="部署到github-1"><a href="#部署到github-1" class="headerlink" title="部署到github"></a><strong>部署到github</strong></h2><h3 id="选择自己的仓库目录，即-you-user-name-github-io"><a href="#选择自己的仓库目录，即-you-user-name-github-io" class="headerlink" title=" 选择自己的仓库目录，即 you_user_name.github.io"></a><strong> 选择自己的仓库目录，即 you_user_name.github.io</strong></h3><p><img src="http://7xsuc5.com2.z0.glb.clouddn.com/image/hexo/p9.png" alt=""><br><img src="http://7xsuc5.com2.z0.glb.clouddn.com/image/hexo/p11.png" alt=""><br><img src="http://7xsuc5.com2.z0.glb.clouddn.com/image/hexo/p12.png" alt=""><br><img src="http://7xsuc5.com2.z0.glb.clouddn.com/image/hexo/p13.png" alt=""><br><img src="http://7xsuc5.com2.z0.glb.clouddn.com/image/hexo/p14.png" alt=""></p>
+<h3 id="hexo的生成和部署"><a href="#hexo的生成和部署" class="headerlink" title=" hexo的生成和部署"></a><strong> hexo的生成和部署</strong></h3> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">cnpm install hero-deployer-git --save</span><br><span class="line">hexo generate</span><br><span class="line">hexo deploy</span><br></pre></td></tr></table></figure>
+<p>提示输入github的账号密码，输入密码即可。<br>注意，you_user_name.github.io 生效大约十分钟，请耐心等待。<br>hexo server 启动下，默认是4000端口<br>在浏览器中输入 you_host_name:4000（自行替换hostname）<br><img src="http://7xsuc5.com2.z0.glb.clouddn.com/image/hexo/p15.jpg" alt=""></p>
+<hr>
+<p><strong>至此，hexo+github部署完毕，enjoy it！</strong></p>
+</the>
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2016/04/08/hexo/">hexo</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主页">zhvon</a></p>
+        <p><span>发布时间:</span>2016-04-08, 17:03:26</p>
+        <p><span>最后更新:</span>2016-04-12, 15:41:09</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2016/04/08/hexo/" title="hexo">http://zhvon.github.io/2016/04/08/hexo/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://zhvon.github.io/2016/04/08/hexo/　　作者: zhvon" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script src="/js/clipboard.min.js"></script>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#环境的搭建"><span class="toc-number">1.</span> <span class="toc-text">环境的搭建</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#部署到github"><span class="toc-number">2.</span> <span class="toc-text">部署到github</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#拥有自己的github"><span class="toc-number">2.1.</span> <span class="toc-text">拥有自己的github</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#设置sshkey"><span class="toc-number">2.2.</span> <span class="toc-text">设置sshkey</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#登录github，进入你的-Account-gt-Settings"><span class="toc-number">2.2.1.</span> <span class="toc-text"> 登录github，进入你的 Account->Settings </span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#左侧栏选择SSH-Keys"><span class="toc-number">2.2.2.</span> <span class="toc-text"> 左侧栏选择SSH Keys</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#复制粘贴"><span class="toc-number">2.2.3.</span> <span class="toc-text"> 复制粘贴</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#测试下是否成功："><span class="toc-number">2.2.4.</span> <span class="toc-text"> 测试下是否成功：</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#部署到github-1"><span class="toc-number">2.3.</span> <span class="toc-text">部署到github</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#选择自己的仓库目录，即-you-user-name-github-io"><span class="toc-number">2.3.1.</span> <span class="toc-text"> 选择自己的仓库目录，即 you_user_name.github.io</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#hexo的生成和部署"><span class="toc-number">2.3.2.</span> <span class="toc-text"> hexo的生成和部署</span></a></li></ol></li></ol></li></ol>
+</div>
+<style>
+    .left-col .switch-btn {
+        display: none;
+    }
+    .left-col .switch-area {
+        display: none;
+    }
+</style>
+
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+<script>
+    var valueHide = "隐藏目录";
+    var valueShow = "显示目录";
+
+    if ($(".left-col").is(":hidden")) {
+        $("#tocButton").attr("value", valueShow);
+    }
+
+    $("#tocButton").click(function() {
+        if ($("#toc").is(":hidden")) {
+            $("#tocButton").attr("value", valueHide);
+            $("#toc").slideDown(320);
+            $(".switch-btn, .switch-area").fadeOut(300);
+        }
+        else {
+            $("#tocButton").attr("value", valueShow);
+            $("#toc").slideUp(350);
+            $(".switch-btn, .switch-area").fadeIn(500);
+        }
+    })
+
+    if ($(".toc").length < 1) {
+        $("#toc, #tocButton").hide();
+        $(".switch-btn, .switch-area").show();
+    }
+</script>
+
+
+
+
+
+    
+<div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <li id="bds_twi"><a href="#" class="bds_twi" data-cmd="twi" title="分享到推特"></a></li>
+            <li id="bds_tsina"><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a></li>
+            <li id="bds_sqq"><a href="#" class="bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a></li>
+            <li id="bds_copy"><a href="#" class="bds_copy" data-cmd="copy" title="复制网址"></a></li>
+            <li id="bds_mail"><a href="#" class="bds_mail" data-cmd="mail" title="通过邮件分享"></a></li>
+            <li id="bds_weixin"><a href="#" class="bds_weixin" data-cmd="weixin" title="生成文章二维码"></a></li>
+            <li id="bds_more"><a href="#" class="bds_more" data-cmd="more"></i></a></li>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"hexo　| Myblog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
+
+    
+</div>
+
+
+
+
+
+
+
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/04/08/hexo/">hexo</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                &copy; 2016 zhvon
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题">Yelee</a> by MOxFIVE
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" >本站到访数: 
+                            <span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>, </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit">本页阅读量: 
+                            <span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+    </div>
+    
+<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.1.22/require.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 5;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
+
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+</body>
+</html>
