@@ -185,3 +185,9 @@ hexo server 启动下，默认是4000端口
 
 
 **至此，hexo+github部署完毕，enjoy it！**
+---
+参考文献：
+[官方文档](https://hexo.io/zh-cn/docs/)
+[小白独立搭建博客--Github Pages和Hexo简明教程](http://www.jianshu.com/p/15ae47eddc56)
+[使用Hexo在Github上搭建自己的博客](http://www.nnbbxx.net/post-3862.html)
+[yelee主题](https://github.com/MOxFIVE/hexo-theme-yelee)
