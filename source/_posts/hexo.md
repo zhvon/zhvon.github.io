@@ -2,12 +2,10 @@
 title: hexo
 date: 2016-04-08 17:03:26
 tags: 
-	-hexo
-	-学习相关
+-hexo
+-学习相关
 ---
 <Excerpt in index | 首页摘要> 
-+ <!-- more -->
-<The rest of contents | 余下全文>
 
 折腾了下hexo，基本环境和部署好了，特意地马一下。
 
@@ -15,7 +13,8 @@ tags:
 > 2. 部署到github
 
 ***
-
++ <!-- more -->
+<The rest of contents | 余下全文>
 
 ># **环境的搭建** #
 
