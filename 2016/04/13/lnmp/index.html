@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="utf-8">
+  
+  <title>lnmp | Myblog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+  <meta name="description" content="系统需求
+CentOS/RHEL/Fedora/Debian/Ubuntu/Raspbian Linux系统需求
+需要3GB以上硬盘剩余空间
+128M以上内存,Xen的需要有SWAP,OpenVZ的另外至少要有128MB以上的vSWAP或突发内存(小内存请勿使用64位系统),MySQL 5.6及MariaDB 10必须1G以上内存。
+VPS或服务器必须已经联网，且必须设置的是网络源不能是光盘源">
+<meta property="og:type" content="article">
+<meta property="og:title" content="lnmp">
+<meta property="og:url" content="http://zhvon.github.io/2016/04/13/lnmp/index.html">
+<meta property="og:site_name" content="Myblog">
+<meta property="og:description" content="系统需求
+CentOS/RHEL/Fedora/Debian/Ubuntu/Raspbian Linux系统需求
+需要3GB以上硬盘剩余空间
+128M以上内存,Xen的需要有SWAP,OpenVZ的另外至少要有128MB以上的vSWAP或突发内存(小内存请勿使用64位系统),MySQL 5.6及MariaDB 10必须1G以上内存。
+VPS或服务器必须已经联网，且必须设置的是网络源不能是光盘源">
+<meta property="og:image" content="http://7xsuc5.com2.z0.glb.clouddn.com/image/lnmp/l1.png">
+<meta property="og:image" content="http://7xsuc5.com2.z0.glb.clouddn.com/image/lnmp/l2.png">
+<meta property="og:image" content="http://7xsuc5.com2.z0.glb.clouddn.com/image/lnmp/l3.png">
+<meta property="og:image" content="http://7xsuc5.com2.z0.glb.clouddn.com/image/lnmp/l4.png">
+<meta property="og:image" content="http://7xsuc5.com2.z0.glb.clouddn.com/image/lnmp/l5.png">
+<meta property="og:image" content="http://7xsuc5.com2.z0.glb.clouddn.com/image/lnmp/l6.png">
+<meta property="og:updated_time" content="2016-04-13T09:10:09.358Z">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="lnmp">
+<meta name="twitter:description" content="系统需求
+CentOS/RHEL/Fedora/Debian/Ubuntu/Raspbian Linux系统需求
+需要3GB以上硬盘剩余空间
+128M以上内存,Xen的需要有SWAP,OpenVZ的另外至少要有128MB以上的vSWAP或突发内存(小内存请勿使用64位系统),MySQL 5.6及MariaDB 10必须1G以上内存。
+VPS或服务器必须已经联网，且必须设置的是网络源不能是光盘源">
+<meta name="twitter:image" content="http://7xsuc5.com2.z0.glb.clouddn.com/image/lnmp/l1.png">
+  
+    <link rel="alternative" href="/atom.xml" title="Myblog" type="application/atom+xml">
+  
+  
+    <link rel="icon" href="/favicon.png">
+  
+  
+      <link rel="stylesheet" href="//cdn.bootcss.com/animate.css/3.5.0/animate.min.css">
+  
+  
+  
+      <script src="//cdn.bootcss.com/pace/1.0.2/pace.min.js"></script>
+      <link href="//cdn.bootcss.com/pace/1.0.2/themes/blue/pace-theme-minimal.css" rel="stylesheet">
+  
+  <link rel="stylesheet" href="/css/style.css">
+  
+  <link rel="stylesheet" href="/font-awesome/css/font-awesome.min.css">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  
+  
+    <link rel="stylesheet" href="/fancybox/jquery.fancybox.css">
+  
+  <script src="//cdn.bootcss.com/jquery/1.9.1/jquery.min.js"></script>
+  <script>
+      var yiliaConfig = {
+          fancybox: true,
+          animate: true,
+          isHome: false,
+          isPost: true,
+          isArchive: false,
+          isTag: false,
+          isCategory: false,
+          open_in_new: false,
+      }
+  </script>
+
+  
+      <script>
+          yiliaConfig.rootUrl = "/";
+      </script>
+  
+
+  
+
+  
+</head>
+<body>
+  <div id="container">
+    <div class="left-col">
+    <div class="overlay"></div>
+<div class="intrude-less">
+    <header id="header" class="inner">
+        <a href="/" class="profilepic">
+            <img src="/img/avatar.png" class="animated zoomIn">
+        </a>
+        <hgroup>
+          <h1 class="header-author"><a href="/">zhvon</a></h1>
+        </hgroup>
+
+        
+                
+
+
+        
+            <div id="switch-btn" class="switch-btn">
+                <div class="icon">
+                    <div class="icon-ctn">
+                        <div class="icon-wrap icon-house" data-idx="0">
+                            <div class="birdhouse"></div>
+                            <div class="birdhouse_holes"></div>
+                        </div>
+                        <div class="icon-wrap icon-ribbon hide" data-idx="1">
+                            <div class="ribbon"></div>
+                        </div>
+                        
+                        <div class="icon-wrap icon-link hide" data-idx="2">
+                            <div class="loopback_l"></div>
+                            <div class="loopback_r"></div>
+                        </div>
+                        
+                        
+                        <div class="icon-wrap icon-me hide" data-idx="3">
+                            <div class="user"></div>
+                            <div class="shoulder"></div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+                <div class="tips-box hide">
+                    <div class="tips-arrow"></div>
+                    <ul class="tips-inner">
+                        <li>菜单</li>
+                        <li>标签</li>
+                        
+                        <li>友情链接</li>
+                        
+                        
+                        <li>关于我</li>
+                        
+                    </ul>
+                </div>
+            </div>
+        
+
+        <div id="switch-area" class="switch-area">
+            <div class="switch-wrap">
+                <section class="switch-part switch-part1">
+                    <nav class="header-menu">
+                        <ul>
+                        
+                            <li><a href="/">主页</a></li>
+                        
+                            <li><a href="/archives/">所有文章</a></li>
+                        
+                            <li><a href="/tags/">标签云</a></li>
+                        
+                            <li><a href="/about/">关于我</a></li>
+                        
+                        </ul>
+                    </nav>
+                    <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <li id="Email"><a class="Email" target="_blank" href="/wind-catalpa@163.com" title="Email"></a></li>
+                            
+                                <li id="GitHub"><a class="GitHub" target="_blank" href="#" title="GitHub"></a></li>
+                            
+                                <li id="RSS"><a class="RSS" target="_blank" href="/atom.xml" title="RSS"></a></li>
+                            
+                        </ul>
+                    </nav>
+                </section>
+                
+                
+                <section class="switch-part switch-part2">
+                    <div class="widget tagcloud" id="js-tagcloud">
+                        <a href="/tags/hexo/" style="font-size: 10px;">hexo</a> <a href="/tags/linux/" style="font-size: 10px;">linux</a> <a href="/tags/lnmp/" style="font-size: 10px;">lnmp</a>
+                    </div>
+                </section>
+                
+                
+                
+                <section class="switch-part switch-part3">
+                    <div id="js-friends">
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="https://hexo.io">Hexo</a>
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="https://pages.github.com/">GitHub</a>
+                    
+                      <a target="_blank" class="main-nav-link switch-friends-link" href="http://moxfive.xyz/">MOxFIVE</a>
+                    
+                    </div>
+                </section>
+                
+
+                
+                
+                <section class="switch-part switch-part4">
+                
+                    <div id="js-aboutme">专注于前端</div>
+                </section>
+                
+            </div>
+        </div>
+    </header>                
+</div>
+    </div>
+    <div class="mid-col">
+      <nav id="mobile-nav">
+      <div class="overlay">
+          <div class="slider-trigger"></div>
+          <h1 class="header-author js-mobile-header hide"><a href="/" title="回到主页">zhvon</a></h1>
+      </div>
+    <div class="intrude-less">
+        <header id="header" class="inner">
+            <a href="/" class="profilepic">
+                <img src="/img/avatar.png" class="animated zoomIn">
+            </a>
+            <hgroup>
+              <h1 class="header-author"><a href="/" title="回到主页">zhvon</a></h1>
+            </hgroup>
+            
+            <nav class="header-menu">
+                <ul>
+                
+                    <li><a href="/">主页</a></li>
+                
+                    <li><a href="/archives/">所有文章</a></li>
+                
+                    <li><a href="/tags/">标签云</a></li>
+                
+                    <li><a href="/about/">关于我</a></li>
+                
+                <div class="clearfix"></div>
+                </ul>
+            </nav>
+            <nav class="header-nav">
+                        <ul class="social">
+                            
+                                <li id="Email"><a class="Email" target="_blank" href="/wind-catalpa@163.com" title="Email"></a></li>
+                            
+                                <li id="GitHub"><a class="GitHub" target="_blank" href="#" title="GitHub"></a></li>
+                            
+                                <li id="RSS"><a class="RSS" target="_blank" href="/atom.xml" title="RSS"></a></li>
+                            
+                        </ul>
+            </nav>
+        </header>                
+    </div>
+</nav>
+      <div class="body-wrap"><article id="post-lnmp" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/04/13/lnmp/" class="article-date">
+      <time datetime="2016-04-13T08:18:10.000Z" itemprop="datePublished">2016-04-13</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      lnmp
+    </h1>
+  
+
+      </header>
+      
+      <div class="article-info article-info-post">
+        
+    <div class="article-category tagcloud">
+    <a class="article-category-link" href="/categories/学习相关/">学习相关</a>
+    </div>
+
+
+        
+    <div class="article-tag tagcloud">
+        <ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/linux/">linux</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/lnmp/">lnmp</a></li></ul>
+    </div>
+
+        <div class="clearfix"></div>
+      </div>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+          
+        <p><excerpt in="" index="" |="" 首页摘要=""> </excerpt></p>
+<h1 id="系统需求"><a href="#系统需求" class="headerlink" title="系统需求"></a><strong>系统需求</strong></h1><ul>
+<li>CentOS/RHEL/Fedora/Debian/Ubuntu/Raspbian Linux系统需求</li>
+<li>需要3GB以上硬盘剩余空间</li>
+<li>128M以上内存,Xen的需要有SWAP,OpenVZ的另外至少要有128MB以上的vSWAP或突发内存(小内存请勿使用64位系统),MySQL 5.6及MariaDB 10必须1G以上内存。</li>
+<li>VPS或服务器必须已经联网，且必须设置的是网络源不能是光盘源，同时VPS/服务器 DNS要正常！</li>
+<li>Linux下区分大小写，输入命令时请注意！<a id="more"></a>
+<the rest="" of="" contents="" |="" 余下全文="">
+
+</the></li>
+</ul>
+<h1 id="安装步骤"><a href="#安装步骤" class="headerlink" title="安装步骤"></a><strong>安装步骤</strong></h1><h2 id="下载并安装LNMP一键安装包"><a href="#下载并安装LNMP一键安装包" class="headerlink" title="下载并安装LNMP一键安装包"></a>下载并安装LNMP一键安装包</h2><p>可以选择使用下载版(推荐国外或者美国VPS使用)或者完整版(推荐国内VPS使用)，两者没什么区别，只是完整版把一些需要的源码文件预先放到安装包里。</p>
+<p>安装LNMP执行：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget -c http://soft.vpser.net/lnmp/lnmp1.2-full.tar.gz &amp;&amp; tar zxf lnmp1.2-full.tar.gz &amp;&amp; <span class="built_in">cd</span> lnmp1.2-full &amp;&amp; ./install.sh lnmp</span><br></pre></td></tr></table></figure></p>
+<p>如需要安装LNMPA或LAMP，将./install.sh 后面的参数替换为lnmpa或lamp即可。<br>如下载速度慢请更换其他下载节点</p>
+<p><a href="http://lnmp.org/download.html" target="_blank" rel="external">下载页面</a><br><a href="http://lnmp.org/faq/lnmp-download-source.html" target="_blank" rel="external">LNMP下载节点具体替换方</a><br><a href="http://soft.vpser.net/lnmp/" target="_blank" rel="external">lnmp版本一览</a></p>
+<p>这里选择最新稳定版，即lnmp 1.2<br>执行：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">wget --no-check-certificate https://api.sinas3.com/v1/SAE_lnmp/soft/lnmp1.2-full.tar.gz &amp;&amp; tar zxf lnmp1.2-full.tar.gz &amp;&amp; <span class="built_in">cd</span> lnmp1.2-full &amp;&amp; ./install.sh lnmp</span><br></pre></td></tr></table></figure></p>
+<blockquote>
+<p>按上述命令执行后，会出现如下提示：</p>
+</blockquote>
+<p><img src="http://7xsuc5.com2.z0.glb.clouddn.com/image/lnmp/l1.png" alt=""></p>
+<blockquote>
+<p>需要设置MySQL的root密码（不输入直接回车将会设置为root），输入后回车进入下一步，如下图:</p>
+</blockquote>
+<p><img src="http://7xsuc5.com2.z0.glb.clouddn.com/image/lnmp/l2.png" alt=""></p>
+<blockquote>
+<p>这里需要确认是否启用MySQL InnoDB，如果不确定是否启用可以输入 y ，输入 y 表示启用，输入 n 表示不启用。默认为y 启用，输入后回车进入下一步，选择MySQL版 </p>
+</blockquote>
+<p><img src="http://7xsuc5.com2.z0.glb.clouddn.com/image/lnmp/l3.png" alt=""></p>
+<blockquote>
+<p>输入MySQL或MariaDB版本的序号，回车进入下一步，选择PHP版本：</p>
+</blockquote>
+<p><img src="http://7xsuc5.com2.z0.glb.clouddn.com/image/lnmp/l4.png" alt=""></p>
+<blockquote>
+<p>输入PHP版本的序号，回车进入下一步，选择是否安装内存优化：</p>
+</blockquote>
+<p><img src="http://7xsuc5.com2.z0.glb.clouddn.com/image/lnmp/l5.png" alt=""></p>
+<blockquote>
+<p>可以选择不安装、Jemalloc或TCmalloc，输入对应序号回车。<br>提示”Press any key to install…or Press Ctrl+c to cancel”后，按回车键确认开始安装。<br>LNMP脚本就会自动安装编译Nginx、MySQL、PHP、phpMyAdmin、Zend Optimizer这几个软件。<br>安装时间可能会几十分钟到几个小时不等，主要是机器的配置网速等原因会造成影响。</p>
+</blockquote>
+<h2 id="安装完成"><a href="#安装完成" class="headerlink" title="安装完成"></a>安装完成</h2><p>如果显示Nginx: OK，MySQL: OK，PHP: OK<br><img src="http://7xsuc5.com2.z0.glb.clouddn.com/image/lnmp/l6.png" alt=""><br>并且Nginx、MySQL、PHP都是running，80和3306端口都存在，并Install lnmp V1.2 completed! enjoy it.的话，说明已经安装成功。<br>接下来按添加虚拟主机教程，通过sftp或ftp服务器上传网站，将域名解析到VPS或服务器的IP上，解析生效即可使用。<br><a href="http://lnmp.org/faq/lnmp-vhost-add-howto.html" target="_blank" rel="external">添加虚拟机教程</a></p>
+<hr>
+<p>至此，lnmp安装完毕</p>
+<hr>
+<p>参考文献:<br><a href="http://lnmp.org/" target="_blank" rel="external">LNMP一键安装包</a></p>
+
+      
+    </div>
+    
+  </div>
+  
+    
+    <div class="copyright">
+        <p><span>本文标题:</span><a href="/2016/04/13/lnmp/">lnmp</a></p>
+        <p><span>文章作者:</span><a href="/" title="回到主页">zhvon</a></p>
+        <p><span>发布时间:</span>2016-04-13, 16:18:10</p>
+        <p><span>最后更新:</span>2016-04-13, 17:10:09</p>
+        <p>
+            <span>原始链接:</span><a class="post-url" href="/2016/04/13/lnmp/" title="lnmp">http://zhvon.github.io/2016/04/13/lnmp/</a>
+            <span class="copy-path" data-clipboard-text="原文: http://zhvon.github.io/2016/04/13/lnmp/　　作者: zhvon" title="点击复制文章链接"><i class="fa fa-clipboard"></i></span>
+            <script src="/js/clipboard.min.js"></script>
+            <script> var clipboard = new Clipboard('.copy-path'); </script>
+        </p>
+        <p>
+            <span>许可协议:</span><i class="fa fa-creative-commons"></i> <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/" title="CC BY-NC-SA 4.0 International" target = "_blank">"署名-非商用-相同方式共享 4.0"</a> 转载请保留原文链接及作者。
+        </p>
+    </div>
+
+
+
+    <nav id="article-nav">
+        
+        
+            <div id="article-nav-older" class="article-nav-title">
+                <a href="/2016/04/08/hexo/">
+                    hexo
+                </a>
+            </div>
+        
+    </nav>
+
+  
+</article>
+
+    <div id="toc" class="toc-article">
+    <strong class="toc-title">文章目录</strong>
+    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#系统需求"><span class="toc-number">1.</span> <span class="toc-text">系统需求</span></a></li><li class="toc-item toc-level-1"><a class="toc-link" href="#安装步骤"><span class="toc-number">2.</span> <span class="toc-text">安装步骤</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#下载并安装LNMP一键安装包"><span class="toc-number">2.1.</span> <span class="toc-text">下载并安装LNMP一键安装包</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#安装完成"><span class="toc-number">2.2.</span> <span class="toc-text">安装完成</span></a></li></ol></li></ol>
+</div>
+<style>
+    .left-col .switch-btn {
+        display: none;
+    }
+    .left-col .switch-area {
+        display: none;
+    }
+</style>
+
+<input type="button" id="tocButton" value="隐藏目录"  title="点击按钮隐藏或者显示文章目录">
+<script>
+    var valueHide = "隐藏目录";
+    var valueShow = "显示目录";
+
+    if ($(".left-col").is(":hidden")) {
+        $("#tocButton").attr("value", valueShow);
+    }
+
+    $("#tocButton").click(function() {
+        if ($("#toc").is(":hidden")) {
+            $("#tocButton").attr("value", valueHide);
+            $("#toc").slideDown(320);
+            $(".switch-btn, .switch-area").fadeOut(300);
+        }
+        else {
+            $("#tocButton").attr("value", valueShow);
+            $("#toc").slideUp(350);
+            $(".switch-btn, .switch-area").fadeIn(500);
+        }
+    })
+
+    if ($(".toc").length < 1) {
+        $("#toc, #tocButton").hide();
+        $(".switch-btn, .switch-area").show();
+    }
+</script>
+
+
+
+
+
+    
+<div class="share">
+    
+        <div class="bdsharebuttonbox">
+            <li id="bds_twi"><a href="#" class="bds_twi" data-cmd="twi" title="分享到推特"></a></li>
+            <li id="bds_tsina"><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a></li>
+            <li id="bds_sqq"><a href="#" class="bds_sqq" data-cmd="sqq" title="分享给 QQ 好友"></a></li>
+            <li id="bds_copy"><a href="#" class="bds_copy" data-cmd="copy" title="复制网址"></a></li>
+            <li id="bds_mail"><a href="#" class="bds_mail" data-cmd="mail" title="通过邮件分享"></a></li>
+            <li id="bds_weixin"><a href="#" class="bds_weixin" data-cmd="weixin" title="生成文章二维码"></a></li>
+            <li id="bds_more"><a href="#" class="bds_more" data-cmd="more"></i></a></li>
+        </div>
+        <script>
+            window._bd_share_config={
+                "common":{"bdSnsKey":{},"bdText":"lnmp　| Myblog　","bdMini":"2","bdMiniList":false,"bdPic":"","bdStyle":"0","bdSize":"24"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];
+        </script>
+    
+
+    
+</div>
+
+
+
+
+
+
+
+    
+
+
+
+
+    <div class="scroll" id="post-nav-button">
+        
+            <a href="/" title="回到主页"><i class="fa fa-home"></i></a>
+        
+
+        <a title="文章列表"><i class="fa fa-bars"></i><i class="fa fa-times"></i></a>
+
+        
+            <a href="/2016/04/08/hexo/" title="下一篇: hexo">
+                <i class="fa fa-angle-right"></i>
+            </a>
+        
+    </div>
+
+    <ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/04/13/lnmp/">lnmp</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/04/08/hexo/">hexo</a></li></ul>
+
+
+
+
+    <script>
+        
+    </script>
+</div>
+      <footer id="footer">
+    <div class="outer">
+        <div id="footer-info">
+            <div class="footer-left">
+                &copy; 2016 zhvon
+            </div>
+            <div class="footer-right">
+                <a href="http://hexo.io/" target="_blank" title="快速、简洁且高效的博客框架">Hexo</a>  Theme <a href="https://github.com/MOxFIVE/hexo-theme-yelee" target="_blank" title="简而不减 Hexo 双栏博客主题">Yelee</a> by MOxFIVE
+            </div>
+        </div>
+        
+            <div class="visit">
+                
+                    <span id="busuanzi_container_site_pv" style='display:none'>
+                        <span id="site-visit" >本站到访数: 
+                            <span id="busuanzi_value_site_uv"></span>
+                        </span>
+                    </span>
+                
+                
+                    <span>, </span>
+                
+                
+                    <span id="busuanzi_container_page_pv" style='display:none'>
+                        <span id="page-visit">本页阅读量: 
+                            <span id="busuanzi_value_page_pv"></span>
+                        </span>
+                    </span>
+                
+            </div>
+        
+    </div>
+</footer>
+    </div>
+    
+<script data-main="/js/main.js" src="//cdn.bootcss.com/require.js/2.1.22/require.min.js"></script>
+
+    <script>
+        $(document).ready(function() {
+            var iPad = window.navigator.userAgent.indexOf('iPad');
+            if (iPad > -1 || $(".left-col").css("display") === "none") {
+                var bgColorList = ["#9db3f4", "#414141", "#e5a859", "#f5dfc6", "#c084a0", "#847e72", "#cd8390", "#996731"];
+                var bgColor = Math.ceil(Math.random() * (bgColorList.length - 1));
+                $("body").css({"background-color": bgColorList[bgColor], "background-size": "cover"});
+            }
+            else {
+                var backgroundnum = 5;
+                var backgroundimg = "url(/background/bg-x.jpg)".replace(/x/gi, Math.ceil(Math.random() * backgroundnum));
+                $("body").css({"background": backgroundimg, "background-attachment": "fixed", "background-size": "cover"});
+            }
+        })
+    </script>
+
+
+
+
+<div class="scroll" id="scroll">
+    <a href="#" title="返回顶部"><i class="fa fa-arrow-up"></i></a>
+    <a href="#comments" title="查看评论"><i class="fa fa-comments-o"></i></a>
+    <a href="#footer" title="转到底部"><i class="fa fa-arrow-down"></i></a>
+</div>
+
+<script async src="https://dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+</script>
+  </div>
+</body>
+</html>
