@@ -3,6 +3,7 @@ title: hexo
 date: 2016-04-08 17:03:26
 tags: 
 - hexo
+categories:
 - 学习相关
 ---
 <Excerpt in index | 首页摘要> 
