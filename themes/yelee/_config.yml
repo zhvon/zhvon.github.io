@@ -37,10 +37,10 @@ root_url:
 
 subnav:
   Email: "wind-catalpa@163.com"
-  #新浪微博: "sina weibo"
-  GitHub: "#"
+  新浪微博: "http://weibo.com/1836892942/profile?topnav=1&wvr=6"
+  GitHub: "https://github.com/zhvon"
   #V2EX: "#"
-  RSS: "/atom.xml"
+  #RSS: "/atom.xml"
   #知乎: "zhihu"
   #豆瓣: "douban"
   #简书: "jianshu"
