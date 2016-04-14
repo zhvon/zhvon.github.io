@@ -15,7 +15,8 @@ menu:
 avatar: /img/avatar.png
 
 # Small icon of Your site | 站点小图标地址
-favicon: /favicon.png
+#favicon: /favicon.png
+favicon: /img/avatar.png
 
 # Internationalization | 主题语言
 ## Change Language in SITE's _config.yml | 在站点配置中切换语言
@@ -153,7 +154,7 @@ friends:
 #friends: false
 
 #是否开启“关于我”。
-aboutme: 专注于前端
+aboutme: 专注于后端
 #aboutme: false
 
 # 是否在新窗口打开链接
