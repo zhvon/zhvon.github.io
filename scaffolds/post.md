@@ -2,7 +2,9 @@
 title: {{ title }}
 date: {{ date }}
 tags:
-categorise:
+-
+categories:
+-
 ---
 <Excerpt in index | 首页摘要> 
 
