@@ -1,5 +1,5 @@
 ---
-title: hexo
+title: hexo环境搭建+部署到github
 date: 2016-04-08 17:03:26
 tags: 
 - hexo

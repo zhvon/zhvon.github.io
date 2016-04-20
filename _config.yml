@@ -4,15 +4,15 @@
 
 # Site
 title: Myblog
-subtitle:
-description:
+subtitle: 旅行的意义 
+escription: 
 author: zhvon 
 language:
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://zhvon.github.io
+url: http://blog.zhvon.com/
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:

@@ -1,5 +1,5 @@
 ---
-title: lnmp
+title: lnmp安装
 date: 2016-04-13 16:18:10
 tags: 
 - linux
