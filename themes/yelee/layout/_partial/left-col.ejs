@@ -12,7 +12,12 @@
         <p class="header-subtitle"><%=theme.subtitle%></p>
         <%}%>
         <% if (theme.search_box){ %>
-        <form><input type="text" class="search" placeholder=" Search..."></form>
+        <form action="/search/index.html" method="get"><input type="text" class="search" placeholder=" Search..." name="s"></form>
+        <%}%>        
+        <% if (theme.swift_search.enable){ %>
+            <form class="search" action="<%- config.root %>search/index.html" method="get" accept-charset="utf-8">
+                <input type="text" id="search" class="st-default-search-input" maxlength="20" placeholder="Search" />
+            </form>
         <%}%>        
 
 
@@ -107,4 +112,12 @@
             </div>
         </div>
     </header>                
+    <script type="text/javascript">
+     (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+       (w[n].q=w[n].q||[]).push(arguments);
+       };s=d.createElement(t);
+       e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+         })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+    _st('install','5j5ZpzPaD88GzFExX5xW','2.0.0');
+  </script>
 </div>
