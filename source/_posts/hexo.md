@@ -4,7 +4,8 @@ date: 2016-04-08 17:03:26
 tags: 
 - hexo
 categories:
-- 学习相关
+- 分享
+
 ---
 <Excerpt in index | 首页摘要> 
 折腾了下hexo，基本环境和部署好了，特意地马一下。
@@ -25,7 +26,7 @@ git clone https://github.com/creationix/nvm.git
 <!-- more -->
 <The rest of contents | 余下全文>
 
-- 执行以下命令即可吧nvm安装完毕。
+- 执行以下命令即可吧nvm安装完毕(如果nvm提示没安装，重启下主机)。
 
 ```bash
 cd nvm

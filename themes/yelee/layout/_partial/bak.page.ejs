@@ -39,6 +39,8 @@
         depth: 1,
     }) %>
 
+    <p class="count"></p>
+
     <div class="tags" id="tags" style="display:none">
         <ul>
         <%- tagcloud({
@@ -99,14 +101,12 @@
     </style>
 
     <!-- Count tags and categories -->
-    <script src="/js/jquery.tagcanvas.js"></script>
-    <div id="myCanvasContainer">
-        <canvas width="300" height="300" id="my3DTags">
-          <p>Anything in here will be replaced on browsers that support the canvas element!</p>
-        </canvas>
-    </div>
+    <p id="count">
+            已有<span><script>document.write($(".category-list-item").length)</script></span>个分类，
+            共计<span><script>document.write($(".tags > a").length)</script></span>个标签。
+    </p>
     <script>
-    $(document).ready(function(){
-        $("#my3DTags").tagcanvas({textFont:"Georgia,Optima",textColour:null,outlineColour:"#ff00ff",weight:!0,reverse:!0,depth:.8,maxSpeed:.05,bgRadius:1,freezeDecel:!0},"tags")||$("#myCanvasContainer").hide()});
+        $('#count').appendTo('.count');
     </script>
+
 <% } %>

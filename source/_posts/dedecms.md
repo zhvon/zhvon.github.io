@@ -6,7 +6,7 @@ tags:
   - php
   - dede
 categories:
-  - 学习相关
+  - 分享
 date: 2016-04-20 11:34:25
 ---
 <Excerpt in index | 首页摘要> 
