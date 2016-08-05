@@ -95,16 +95,16 @@ youyan:
 ## "5": show images form bg-1.jpg to bg-5.jpg in `/yelee/source/background/`
 ## "5": 显示`/yelee/source/background/`文件夹中 bg-1.jpg 到 bg-5.jpg 这5张图片
 ## "0": white-gray background | 淳朴灰白背景
-background_image: 5
+background_image: 1
 
 ## General Color Scheme | 主题配色方案 
 ## 可用值 Value: yilia
 color_scheme: 
 
 highlight_style:
-  #on: true
-  inline_code: 3  # Value: 0 - 9 可选
-  code_block: 3  # Value: 0 - 4 
+  on: true
+  inline_code: 2  # Value: 0 - 9 可选
+  code_block: 2  # Value: 0 - 4 
   # Set inline_code to style highlight text
   # Chose a highlight theme for code block
   # 通过 inline_code 切换内置文本高亮样式
