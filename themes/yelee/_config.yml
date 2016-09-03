@@ -95,11 +95,11 @@ youyan:
 ## "5": show images form bg-1.jpg to bg-5.jpg in `/yelee/source/background/`
 ## "5": 显示`/yelee/source/background/`文件夹中 bg-1.jpg 到 bg-5.jpg 这5张图片
 ## "0": white-gray background | 淳朴灰白背景
-background_image: 1
+background_image: 0
 
 ## General Color Scheme | 主题配色方案 
 ## 可用值 Value: yilia
-color_scheme: 
+color_scheme: yilia
 
 highlight_style:
   on: true
@@ -199,9 +199,9 @@ baidu_tongji:
 # 不蒜子网站计数设置
 # http://ibruce.info/2015/04/04/busuanzi/
 visit_counter:
-  on: true
-  site_visit: true
-  page_visit: true
+  on: false
+  site_visit: false
+  page_visit: false
 
 # GitHub Repo Widget
 # https://github.com/hustcc/GitHub-Repo-Widget.js
@@ -216,7 +216,7 @@ github_widget: false
 progressBar:
   on: true
   type: "minimal"  # Keep Quotes | 保留引号避免出错
-  color: blue
+  color: red
 
 swift_search:
     enable: false

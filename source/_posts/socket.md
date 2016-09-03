@@ -11,9 +11,7 @@ date: 2016-04-18 10:40:20
 如果对``socket``还没有很好的理解
 可以干了这篇干货：[Linux的SOCKET编程详解](http://blog.csdn.net/hguisu/article/details/7445768/)
 
-> # ** socket中几个重要的结构体 ** #
-
----
+# socket中几个重要的结构体 #
 
 ## IP地址信息结构体 ##
 
@@ -121,7 +119,7 @@ struct addrinfo {
 
 如下为初始化sockaddr_in 
 ```c
-/创建sockaddr_in结构体变量
+//创建sockaddr_in结构体变量
 struct sockaddr_in serv_addr;
 memset(&serv_addr, 0, sizeof(serv_addr));  //每个字节都用0填充
 serv_addr.sin_family = AF_INET;  //使用IPv4地址
@@ -142,7 +140,7 @@ htons() 用来将 当前主机字节序 转换为 网络字节序，其中h代�
 
 ``ntohl()``：network to host long，将long类型数据从网络字节序转换为主机字节序。
 
-> # 编写一个简易服务器# 
+# 编写一个简易服务器# 
 
 ## 例子代码 ##
 
@@ -223,9 +221,3 @@ int main() {
 ![](http://7xsuc5.com2.z0.glb.clouddn.com/image/sockey/s1.jpg)
 ![](http://7xsuc5.com2.z0.glb.clouddn.com/image/sockey/s2.jpg)
 
----
-
-部分内容来自：
-[socket的网络字节序和大小端序](https://www.yangxg.com/blog/849106787.html)
-[socket缓冲区以及阻塞模式](https://www.yangxg.com/blog/1225002879.html)
-[socket中几个重要结构体](https://www.yangxg.com/blog/4039671808.html)

@@ -1,10 +1,10 @@
 ---
 title: nginx
 tags:
+   nginx
+categories:
   - 学习相关
   - 分享
-categories:
-  - nginx
 date: 2016-08-11 19:57:18
 ---
 <Excerpt in index | 首页摘要> 
