@@ -182,6 +182,49 @@ hexo server 启动下，默认是4000端口
 在浏览器中输入 you_host_name:4000（自行替换hostname）
 ![](http://7xsuc5.com2.z0.glb.clouddn.com/image/hexo/p15.jpg)
 
+# **注意** #
+
+新的环境下重新部署已有的hexo，会出现生成时候缺少很多必要文件
+
+在项目目录下使用指令查看下：
+```bash
+npm ls --depth 0
+```
+
+会出现类似的提示:
+```bash
+├── hexo@3.3.8
+├── UNMET DEPENDENCY hexo-deployer-git@^0.1.0
+├── UNMET DEPENDENCY hexo-generator-archive@^0.1.4
+├── UNMET DEPENDENCY hexo-generator-category@^0.1.3
+├── UNMET DEPENDENCY hexo-generator-index@^0.2.0
+├── UNMET DEPENDENCY hexo-generator-tag@^0.2.0
+├── UNMET DEPENDENCY hexo-renderer-ejs@^0.2.0
+├── UNMET DEPENDENCY hexo-renderer-marked@^0.2.10
+├── UNMET DEPENDENCY hexo-renderer-stylus@^0.3.1
+└── UNMET DEPENDENCY hexo-server@^0.2.0
+
+npm ERR! missing: hexo-deployer-git@^0.1.0, required by hexo-site@0.0.0
+npm ERR! missing: hexo-generator-archive@^0.1.4, required by hexo-site@0.0.0
+npm ERR! missing: hexo-generator-category@^0.1.3, required by hexo-site@0.0.0
+npm ERR! missing: hexo-generator-index@^0.2.0, required by hexo-site@0.0.0
+npm ERR! missing: hexo-generator-tag@^0.2.0, required by hexo-site@0.0.0
+npm ERR! missing: hexo-renderer-ejs@^0.2.0, required by hexo-site@0.0.0
+npm ERR! missing: hexo-renderer-marked@^0.2.10, required by hexo-site@0.0.0
+npm ERR! missing: hexo-renderer-stylus@^0.3.1, required by hexo-site@0.0.0
+npm ERR! missing: hexo-server@^0.2.0, required by hexo-site@0.0.0
+```
+
+**解决方式**
+```bash
+npm install hexo-generator-archive --save
+npm install hexo-generator-category --save
+npm install hexo-generator-index --save
+npm install hexo-generator-tag --save
+npm install hexo-renderer-ejs --save
+npm install hexo-renderer-marked --save
+npm install hexo-renderer-stylus --save
+```
 
 ----------
 
